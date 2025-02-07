@@ -9,7 +9,35 @@
 </head>
 
 <body>
-    <div class="coming-soon">Coming Soon</div>
+    <button id="signoutbtn">Logout</button>
+    <h1 id="msg"></h1>
+    <div class="coming-soon">All New Features are coming soon!!</div>
+    <script>
+        let userCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+        let userInfo = JSON.parse(sessionStorage.getItem("user-insfo"))
+
+        let msgHead = document.getElementById('msg');
+        let SignoutBtn = document.getElementById('signoutbtn');
+
+        let Signout = () => {
+            sessionStorage.removeItem("user-creds");
+            sessionStorage.removeItem("user-insfo");
+            window.location.href = "/index.html";
+        }
+
+        let checkedCred = () => {
+            if (!sessionStorage.getItem("user-creds")) {
+                window.location.href = "/index.html";
+            }
+            else {
+                msgHead.innerText = `Logged in with Username :  ${userInfo.Username}`;
+            }
+        }
+
+        window.addEventListener('load', checkedCred);
+        SignoutBtn.addEventListener('click', Signout);
+
+    </script>
 </body>
 
 </html>

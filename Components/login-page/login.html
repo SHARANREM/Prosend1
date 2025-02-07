@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
@@ -17,13 +18,13 @@
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <img src="/Assets/icons/user.png" alt="User">
-                        <input type="text" placeholder="Username" />
+                        <input type="text" placeholder="Username" id="simail" />
                     </div>
                     <div class="input-field">
                         <img src="/Assets/icons/padlock.png" alt="Password">
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Password" id="sipass" />
                     </div>
-                    <input type="submit" value="Login" class="btn solid" />
+                    <input type="submit" value="Login" class="btn solid" id="sibtn" />
 
 
                 </form>
@@ -31,17 +32,17 @@
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <img src="/Assets/icons/user.png" alt="User">
-                        <input type="text" placeholder="Username" />
+                        <input type="text" placeholder="Username" id="suname" />
                     </div>
                     <div class="input-field">
                         <img src="/Assets/icons/mail.png" alt="User">
-                        <input type="email" placeholder="Email" />
+                        <input type="email" placeholder="Email" id="sumail" />
                     </div>
                     <div class="input-field">
                         <img src="/Assets/icons/padlock.png" alt="User">
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Password" id="supass" />
                     </div>
-                    <input type="submit" class="btn" value="Sign up" />
+                    <input type="submit" class="btn" value="Sign up" id="subtn" />
                 </form>
             </div>
         </div>
@@ -76,6 +77,7 @@
     </div>
 
     <script src="login.js"></script>
+    <script type="module" src="fb.js" defer></script>
 </body>
 
 </html>
